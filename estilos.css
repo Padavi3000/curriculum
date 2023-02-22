@@ -1,0 +1,85 @@
+#Encabezado {  
+  background: #e6a01e;
+  position: sticky;
+  top: 0;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+#foto {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+#tituloSeccion1 {
+  color: #005203;
+  text-decoration: underline;
+}
+
+#tituloSeccion2 {
+  color: #02007a;
+  text-decoration: underline;
+}
+
+#tituloSeccion3 {
+  color: #680000;
+  text-decoration: underline;
+}
+
+.button {
+  border: none;
+  color: rgb(190, 190, 190);
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;  
+  display: inline-block;
+  font-size: 15px;
+  margin: 0px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: rgb(190, 190, 190);
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: rgb(190, 190, 190);
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button3 {
+  background-color: rgb(190, 190, 190);
+  color: black;
+  border: 2px solid #fa5959;
+}
+
+.button3:hover {
+  background-color: #fa5959;
+  color: white;
+}
+
+* {
+  font-family: 'Roboto Slab', serif;    
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: rgb(190, 190, 190);
+  }
+}
