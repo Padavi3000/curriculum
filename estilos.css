@@ -1,4 +1,6 @@
-#Encabezado {  
+/*Defino un encabezado fijo*/
+/*Me hubiera gustado hacer una barra lateral fija*/
+#Encabezado {
   background: #e6a01e;
   position: sticky;
   top: 0;
@@ -7,12 +9,14 @@
   margin: 0px;
 }
 
+/*No fue necesario hacerle cambios a la foto*/
 #foto {
   border: none;
   padding: 0px;
   margin: 0px;
 }
 
+/*Doy un color diferente a cada titulo de seccion*/
 #tituloSeccion1 {
   color: #005203;
   text-decoration: underline;
@@ -28,12 +32,13 @@
   text-decoration: underline;
 }
 
+/*Defino los botones y hago que cambien de color*/
 .button {
   border: none;
   color: rgb(190, 190, 190);
   padding: 6px 12px;
   text-align: center;
-  text-decoration: none;  
+  text-decoration: none;
   display: inline-block;
   font-size: 15px;
   margin: 0px;
@@ -74,12 +79,59 @@
   color: white;
 }
 
-* {
-  font-family: 'Roboto Slab', serif;    
+/*Intercalo el color de cada linea de cada seccion de la pagina*/
+.datos1 {
+  color: #010035;
 }
 
-@media screen and (min-width: 480px) {
-  body {
-    background-color: rgb(190, 190, 190);
+.datos2 {
+  color: #380000;
+}
+
+.datoExper1 {
+  color: #380000;
+}
+
+.datoExper2 {
+  color: #002701;
+}
+
+.datoHabil1 {
+  color: #002701;
+}
+
+.datoHabil2 {
+  color: #010035;
+}
+
+/*Letra usada en toda la pagina*/
+* {
+  font-family: 'Roboto Slab', serif;
+}
+
+/*Color de fondo que no incluira al encabezado*/
+body {
+  background-color: rgb(190, 190, 190);
+}
+
+/*hago Desaparecer los botones si la pantalla es muy angosta*/
+@media screen and (max-width: 529px) {
+  #botonInformacion {
+    display: none;
+  }
+ 
+  #botonExperiencia {
+    display: none;
+  }
+
+  #botonHabilidades {
+    display: none;
+  }
+}
+
+/*hago Aparecer los botones si la pantalla es muy angosta*/
+@media screen and (min-width: 530px) {
+  .boton {
+    display: inline;
   }
 }

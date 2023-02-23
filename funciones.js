@@ -58,24 +58,33 @@ const ObtenerUsuario = async () => {
 //Cada vez que se recarga la pagina se carga un nuevo Curricilum
 document.addEventListener("DOMContentLoaded", ObtenerUsuario);
 
-//llama a la funcion localizar
-localizar();
+const haceClick = document.getElementById("botonInformacion");
+haceClick.onclick=true;
 
-//Agrege funcion de geolocalizacion a la pagina
-function localizar() {        
+//llama a la funcion localizar si es la primera vez que se usa la la pagina o
+//No tiene la localizacion guardada en localStorage
+if (localStorage.latutud == undefined && localStorage.longitud == undefined ||
+        localStorage.latutud == 0 && localStorage.longitud == 0)
+        localizar();
+
+
+//Agrege una funcion de geolocalizacion a la pagina
+function localizar() {
         if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(mostrarPosicionEnConsola, siHayError);
         } else {
                 console.log("La geolocalizacion no es soportada por este navegador.");
-        }        
+                localStorage.latutud = 0;
+                localStorage.longitud = 0;
+                localStorage.presicion = 0;
+        }
 }
 
-//muestra los resultados en consola
+//muestra los resultados de localizacion en consola
 function mostrarPosicionEnConsola(position) {
         console.log("Latitud: " + position.coords.latitude +
                 "    Longitud: " + position.coords.longitude +
                 "    Con una presicion de: " + position.coords.accuracy + " metros");
-
         localStorage.latutud = position.coords.latitude;
         localStorage.longitud = position.coords.longitude;
         localStorage.presicion = position.coords.accuracy;
@@ -97,4 +106,7 @@ function siHayError(error) {
                         console.log("Un error desconocido ocurrió.");
                         break;
         }
+        localStorage.latutud = 0;
+        localStorage.longitud = 0;
+        localStorage.presicion = 0;
 }
