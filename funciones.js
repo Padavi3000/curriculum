@@ -18,9 +18,14 @@ const numCalle = document.getElementById("numCalle");
 const numPiso = document.getElementById("numPiso");
 const departamento = document.getElementById("departamento");
 
+//Todavia me falta hacer que esta funcion posicione la pagina en la referencia #Personal
+function cargar(){
+        console.log("como lo posiciono la pagina en #Personal ????");       
+}
 
 // Esta funcion va a hacer uso de la API RANDOM USER GENERATOR
 const ObtenerUsuario = async () => {
+        const haceClick = document.getElementById("botonInformacion");
         try {
                 const direccion = 'https://randomuser.me/api/';
                 //direccion web donde obtener datos personales ficticios
@@ -53,13 +58,11 @@ const ObtenerUsuario = async () => {
         } catch (error) {
                 console.log(error)
         }
+        haceClick.click();
 }
 
 //Cada vez que se recarga la pagina se carga un nuevo Curricilum
 document.addEventListener("DOMContentLoaded", ObtenerUsuario);
-
-const haceClick = document.getElementById("botonInformacion");
-haceClick.onclick=true;
 
 //llama a la funcion localizar si es la primera vez que se usa la la pagina o
 //No tiene la localizacion guardada en localStorage

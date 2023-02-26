@@ -11,9 +11,10 @@
 
 /*No fue necesario hacerle cambios a la foto*/
 #foto {
-  border: none;
-  padding: 0px;
+  border: 0;
+  padding: 5px;
   margin: 0px;
+  background-color: #0d013a;
 }
 
 /*Doy un color diferente a cada titulo de seccion*/
@@ -114,24 +115,16 @@ body {
   background-color: rgb(190, 190, 190);
 }
 
-/*hago Desaparecer los botones si la pantalla es muy angosta*/
-@media screen and (max-width: 529px) {
-  #botonInformacion {
-    display: none;
-  }
- 
-  #botonExperiencia {
-    display: none;
-  }
-
-  #botonHabilidades {
-    display: none;
+/*Disminuyo el tamaño de los botones si la pantalla es un poco mas angosta*/
+@media screen and (max-width: 562px) {
+  .button {
+    font-size: 10px;
   }
 }
 
-/*hago Aparecer los botones si la pantalla es muy angosta*/
-@media screen and (min-width: 530px) {
-  .boton {
-    display: inline;
+/*Agrando un poco los botones si se puede*/
+@media screen and (min-width: 563px) {
+  .button {
+    font-size: 17px;
   }
 }
