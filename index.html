@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 
+<!--Version 1.0
+    Esta pagina muestra un Curriculum tomando datos de randomuser.api 
+    cada vez que se Recarga la pagina toma nuevos dados
+    tambien hace uso de geolocalizacion solo la primera vez y guarda coodenadas-->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,7 +44,8 @@
 
     <header id="Encabezado">
         <img src="" id='foto' alt="Foto" width="140" height="140">
-        <a href="#Personal"><button id="botonInformacion" class="button button1" onclick="cargar()"><b>Informacion</b></a></button></li>
+        <a href="#Personal"><button id="botonInformacion" class="button button1"
+                onclick="cargar()"><b>Informacion</b></a></button></li>
         <a href="#Experiencia"><button id="botonExperiencia" class="button button2"><b>Experiencia</b></a></button></li>
         <a href="#Habilidades"><button id="botonHabilidades" class="button button3"><b>Habilidades</b></a></button></li>
     </header>
