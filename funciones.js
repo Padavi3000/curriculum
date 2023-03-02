@@ -18,11 +18,6 @@ const numCalle = document.getElementById("numCalle");
 const numPiso = document.getElementById("numPiso");
 const departamento = document.getElementById("departamento");
 
-//Todavia me falta hacer que esta funcion posicione la pagina en la referencia #Personal
-function cargar(){
-        console.log("como lo posiciono la pagina en #Personal ????");       
-}
-
 // Esta funcion va a hacer uso de la API RANDOM USER GENERATOR
 const ObtenerUsuario = async () => {
         const haceClick = document.getElementById("botonInformacion");
@@ -58,7 +53,7 @@ const ObtenerUsuario = async () => {
         } catch (error) {
                 console.log(error)
         }
-        haceClick.click();
+        document.getElementById("Personal").scrollIntoView();
 }
 
 //Cada vez que se recarga la pagina se carga un nuevo Curricilum
