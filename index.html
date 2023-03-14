@@ -16,7 +16,9 @@
     <!--Tipografia Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Lao:wght@500&display=swap" rel="stylesheet">
+
 
     <!--Favicom -->
     <link rel="icon" type="image/x-icon" href="cascada.png">
@@ -43,11 +45,15 @@
 <body>
 
     <header id="Encabezado">
-        <img src="" id='foto' alt="Foto" width="140" height="140">
-        <a href="#Personal"><button id="botonInformacion" class="button button1"
-                onclick="cargar()"><b>Informacion</b></a></button></li>
-        <a href="#Experiencia"><button id="botonExperiencia" class="button button2"><b>Experiencia</b></a></button></li>
-        <a href="#Habilidades"><button id="botonHabilidades" class="button button3"><b>Habilidades</b></a></button></li>
+        <div id="mi-contenedor">
+            <img src="" id="foto" alt="Foto" width="140" height="140">
+            <div id="mi-texto-emergente">Si recargas la pagina, se carga otro Curriculum<br>La primera vez, te pide
+                ubicacion y la guarda en el navegador</div>
+
+            <a href="#Personal"><button id="botonInformacion" class="button button1"><b>Informacion</b></a></button>
+            <a href="#Experiencia"><button id="botonExperiencia" class="button button2"><b>Experiencia</b></a></button>
+            <a href="#Habilidades"><button id="botonHabilidades" class="button button3"><b>Habilidades</b></a></button>
+        </div>
     </header>
 
     <section class="ancla" id="Personal">
@@ -145,8 +151,13 @@
             <li class="datoHabil2">Gestión de proyectos</li>
             <li class="datoHabil1">Excelentes dotes comunicativas</li>
         </ul>
-        <h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></h1>
+        <h1><br><br><br><br><br></h1>
     </section>
+
+    <!-- Me falta crear el video descriptivo del footer -->
+    <footer>
+        <p>Copyright © 2023 - <a href="https://youtu.be/5UBYS7DEiAk">Video Descriptivo en construccion</a> </p>
+    </footer>
 
     <script src="funciones.js"></script>
 

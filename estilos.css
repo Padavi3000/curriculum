@@ -1,12 +1,24 @@
 /*Defino un encabezado fijo*/
 /*Me hubiera gustado hacer una barra lateral fija*/
 #Encabezado {
-  background: #e6a01e;
+  background: #333;
   position: sticky;
   top: 0;
   border: none;
   padding: 0px;
   margin: 0px;
+}
+
+#mi-contenedor {
+  position: relative;
+}
+
+#mi-texto-emergente {
+  display: none;
+  position:absolute;
+  left: 160px;
+  top:  10px;  
+  color: #fff;
 }
 
 /*No fue necesario hacerle cambios a la foto*/
@@ -106,8 +118,13 @@
 }
 
 /*Letra usada en toda la pagina*/
-* {
+* {  
   font-family: 'Roboto Slab', serif;
+}
+
+ol, ul, li {
+  font-size: 20px;
+  font-family: 'Noto Serif Lao', serif;
 }
 
 /*Color de fondo que no incluira al encabezado*/
@@ -127,4 +144,18 @@ body {
   .button {
     font-size: 17px;
   }
+}
+
+/*El footer tiene un fondo oscuro (#333) y texto en color blanco (#fff). 
+La propiedad 'position: fixed;' y 'bottom: 0;' se utiliza para que el footer 
+se mantenga en la parte inferior de la página incluso si el contenido de la página 
+es demasiado corto.*/
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 0px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }

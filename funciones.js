@@ -1,5 +1,5 @@
 // Voy a definir las variables donde se va a escribir 
-// los campos individuales de RANDOM USER GENERATOR
+// los datos obtenidos de RANDOM USER GENERATOR
 const foto = document.getElementById('foto');
 const nombre = document.getElementById('nombre');
 const apellido = document.getElementById("apellido");
@@ -17,6 +17,17 @@ const calle = document.getElementById("calle");
 const numCalle = document.getElementById("numCalle");
 const numPiso = document.getElementById("numPiso");
 const departamento = document.getElementById("departamento");
+
+var miImagen = document.getElementById("Encabezado");
+var miTextoEmergente = document.getElementById("mi-texto-emergente");
+
+miImagen.onmouseover = function () {
+        miTextoEmergente.style.display = "block";
+};
+
+miImagen.onmouseout = function () {
+        miTextoEmergente.style.display = "none";
+};
 
 // Esta funcion va a hacer uso de la API RANDOM USER GENERATOR
 const ObtenerUsuario = async () => {
